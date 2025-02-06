@@ -6,9 +6,9 @@ public class HolidayService {
         int money = 0; // количество денег на счету
 
         for (int month = 0; month < 12; month++) {
-            if (money  >= threshold) { // можем ли отдыхать?
+            if (money >= threshold) { // можем ли отдыхать?
                 count++; // увеличиваем счётчик месяцев отдыха
-                money = money - expenses - (int) Math.ceil(2.0 / 3 * (money - expenses));
+                money -= expenses + (int) Math.ceil((2.0 / 3) * (money - expenses));
             } else {
                 money = (money + income) - expenses;
             }
