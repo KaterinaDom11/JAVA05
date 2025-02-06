@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 public class HolidayServiceTest {
 
     @ParameterizedTest
-    @CsvFileSource(files = "src\\test\\resources\\holiday.csv")
+    @CsvFileSource(files = "src/test/resources/holiday.csv")
 
     public void numberOfVacationMonths(int expected, int income, int expenses, int threshold) {
         HolidayService service = new HolidayService();
